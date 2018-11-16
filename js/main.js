@@ -6,6 +6,5 @@ function selectPage(page) {
 }
 
 $(function () {
-    //selectPage("main");
-    selectPage("addman");
+    selectPage("main");
 });
