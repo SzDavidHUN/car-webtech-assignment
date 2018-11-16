@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Car stuff</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script type="application/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="application/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="nav">
+            <div class="nav-logo">CarStuff</div>
+            <div class="nav-item" onclick="selectPage('main')" id="main">Main page</div>
+            <div class="nav-item" onclick="selectPage('cars')" id="cars">Cars</div>
+            <div class="nav-item" onclick="selectPage('mans')" id="mans">Manufacturers</div>
+            <div class="nav-item right" onclick="selectPage('addcar')" id="addcar">Add Car</div>
+            <div class="nav-item right" onclick="selectPage('addman')" id="addman">Add Manufacturer</div>
+        </div>
+        <div id="content-frame" class="content-frame">
+            <div>
+                <h1>Welcome to our site!</h1>
+                <p>Please wait a few moment while the page loads the main page. If you can read this text, well, it had to be loaded already, so please check your browsers settings, for example javascript is neccesary to use this site.</p>
+            </div>
+        </div>
+    </body>
+</html>
