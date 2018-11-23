@@ -5,6 +5,9 @@ function selectPage(page) {
     $("#content-frame").load(page + ".html");
 }
 
-$(function () {
+$(document).ready(function () {
     selectPage("main");
+    $(".nav-item").on("click", function () {
+        selectPage(this.id);
+    });
 });
