@@ -1,13 +1,16 @@
-$(function () {
+var tableData;
+
+$(document).ready(function () {
     showCars();
 });
 
 function showCars() {
     $.getJSON("manufacturers", function (data) {
+        tableData = data;
         var table = $('<table id="manstable" class="ajaxtable"></table>');
         table.append('<tr><th>Name</th><th>Country</th><th>Founded</th></tr>');
         $.each(data, function (key, value) {
-            var row = $('<tr></tr>');
+            var row = $('<tr onclick="filter(' + key + ')"></tr>');
             $.each(value, function (k, v) {
                 row.append('<td>' + v.valueOf() + '</td>');
             });
@@ -15,4 +18,9 @@ function showCars() {
         });
         $('#table').append(table);
     });
+}
+
+function filter(manufacturer) {
+    document.cookie = tableData[manufacturer].name;
+    selectPage("cars");
 }
