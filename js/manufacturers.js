@@ -21,6 +21,6 @@ function showCars() {
 }
 
 function filter(manufacturer) {
-    document.cookie = tableData[manufacturer].name;
+    Cookies.set('manufacturer', tableData[manufacturer].name, {expires: 1});
     selectPage("cars");
 }
