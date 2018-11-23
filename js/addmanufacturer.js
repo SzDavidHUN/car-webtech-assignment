@@ -6,7 +6,7 @@ $(function () {
             url: 'addManufacturers',
             data: $('form').serialize(),
             success: function (data) {
-                selectPage("mans");
+                selectPage("manufacturers");
             },
             error: function () {
                 alert('Something happened!');
